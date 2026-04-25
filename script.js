@@ -238,10 +238,10 @@ function renderReviews() {
 function loadServiceDetails(id) {
     const container = document.getElementById('service-detail-container');
     const services = {
-        'mehendi': { title: 'Mehendi Designs', price: '50.00', desc: 'Intricate traditional and modern henna art. We use pure, organic henna for long-lasting stains.', img: 'https://images.unsplash.com/photo-1596435345718-d7482b60882e?q=80&w=1000' },
-        'hair': { title: 'Hair Styling', price: '40.00', desc: 'Professional hair artistry for any occasion. Our stylists bring high-end equipment to her doorstep.', img: 'assets/hair.png' },
-        'makeup': { title: 'Professional Makeup', price: '80.00', desc: 'Flawless looks tailored for her unique features using premium products.', img: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000' },
-        'decor': { title: 'Event Decor', price: '200.00', desc: 'Bespoke wedding and party decorations designed to turn visions into reality.', img: 'assets/decor.png' }
+        'mehendi': { title: 'Mehendi Designs', priceLabel: 'From RS:1000', desc: 'Intricate traditional and modern henna art. We use pure, organic henna for long-lasting stains.', img: 'https://images.unsplash.com/photo-1596435345718-d7482b60882e?q=80&w=1000' },
+        'hair': { title: 'Hair Styling', priceLabel: 'From RS:1,500', desc: 'Professional hair artistry for any occasion. Our stylists bring high-end equipment to her doorstep.', img: 'assets/hair.png' },
+        'makeup': { title: 'Professional Makeup', priceLabel: 'From RS:1,500', desc: 'Flawless looks tailored for her unique features using premium products.', img: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000' },
+        'decor': { title: 'Event Decor', priceLabel: 'Custom Quote', desc: 'Bespoke wedding and party decorations designed to turn visions into reality.', img: 'assets/decor.png' }
     };
     const s = services[id];
     if (s) {
@@ -250,7 +250,7 @@ function loadServiceDetails(id) {
                 <div class="detail-img"><img src="${s.img}" alt="${s.title}" style="width: 100%; border-radius: 5px;"></div>
                 <div class="detail-info">
                     <h1 style="font-size: 3.5rem;">${s.title}</h1>
-                    <p style="color: var(--primary); font-size: 1.5rem; margin: 1rem 0 2rem;">Starts from $${s.price}</p>
+                    <p style="color: var(--primary); font-size: 1.5rem; margin: 1rem 0 2rem;">${s.priceLabel}</p>
                     <p style="color: var(--text-muted); margin-bottom: 2rem;">${s.desc}</p>
                     <form id="quick-book-form" style="background: var(--accent); padding: 2rem;">
                         <h4 style="margin-bottom: 1.5rem;">Quick Booking</h4>
@@ -273,14 +273,14 @@ function loadServiceDetails(id) {
 function loadProductDetails(id) {
     const container = document.getElementById('product-detail-container');
     const products = {
-        '1': { name: 'Artisanal Ceramic Vase', price: '45.00', img: 'assets/product1.png', desc: 'Hand-thrown and glazed by local artisans, each vase is a unique piece of functional art.' },
-        '2': { name: 'Ethnic Bead Necklace', price: '32.00', img: 'https://images.unsplash.com/photo-1627252824838-51846b0a8809?q=80&w=1000', desc: 'A stunning statement piece handcrafted with natural beads.' },
-        '3': { name: 'Scented Soy Candle', price: '18.00', img: 'https://images.unsplash.com/photo-1603006905393-d1474668f44d?q=80&w=1000', desc: 'Hand-poured candle with notes of sandalwood and vanilla.' },
-        '4': { name: 'Macrame Wall Art', price: '55.00', img: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000', desc: 'Intricately knotted by hand using sustainable cotton cord.' },
-        '5': { name: 'Embroidered Cushion', price: '38.00', img: 'https://images.unsplash.com/photo-1584184924103-e31005b8e3f2?q=80&w=1000', desc: 'Soft linen cushion featuring exquisite hand-embroidery.' },
-        '6': { name: 'Abstract Canvas Print', price: '75.00', img: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000', desc: 'Curated abstract print on premium textured canvas.' },
-        '7': { name: 'Silk Embroidered Scarf', price: '42.00', img: 'https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?q=80&w=1000', desc: 'Hand-woven luxury silk featuring intricate floral embroidery.' },
-        '8': { name: 'Marble Coaster Set', price: '25.00', img: 'https://images.unsplash.com/photo-1610701596007-11502861dcff?q=80&w=1000', desc: 'Set of four hand-polished natural marble coasters with gold leaf edges.' }
+        '1': { name: 'Flower Decorated Hair/Braid', priceLabel: 'RS:300', img: 'PRODUCT1.jpg', desc: 'Beautiful flower decorated hair and braid designs.' },
+        '2': { name: 'Saree Designs', priceLabel: 'RS:200', img: 'PRODUCT2.jpg', desc: 'Elegant saree designs for every occasion.' },
+        '3': { name: 'Bangle Designs', priceLabel: 'RS:150', img: 'PRODUCT3.png', desc: 'Handcrafted bangle designs.' },
+        '4': { name: 'Decorations', priceLabel: 'RS:500', img: 'PRODUCT4.jpeg', desc: 'Custom decorations for your events.' },
+        '5': { name: 'They Want Decorations', priceLabel: 'RS:1000', img: 'PRODUCT5.jpg', desc: 'Premium event decorations tailored to your needs.' },
+        '6': { name: 'Wedding Props', priceLabel: 'RS:199', img: 'PRODUCT6.jpg', desc: 'Unique wedding props for memorable photos.' },
+        '7': { name: 'Style hair Flower Designs', priceLabel: 'RS:120', img: 'PRODUCT7.jpg', desc: 'Stylish hair flower designs to complete your look.' },
+        '8': { name: 'Haldi Jewellery', priceLabel: 'RS:599', img: 'PRODUCT8.jpg', desc: 'Traditional haldi jewellery for the bride.' }
     };
     const p = products[id];
     if (p) {
@@ -289,9 +289,9 @@ function loadProductDetails(id) {
                 <div class="detail-img"><img src="${p.img}" style="width: 100%; border-radius: 5px;"></div>
                 <div class="detail-info">
                     <h1 style="font-size: 3.5rem;">${p.name}</h1>
-                    <p style="color: var(--primary); font-size: 1.8rem; margin: 1rem 0 2.5rem;">$${p.price}</p>
+                    <p style="color: var(--primary); font-size: 1.8rem; margin: 1rem 0 2.5rem;">${p.priceLabel}</p>
                     <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">${p.desc}</p>
-                    <button class="btn btn-primary add-to-cart-btn" data-id="${id}" data-name="${p.name}" data-price="${p.price}" data-img="${p.img}" style="width:100%; margin-bottom:1rem;">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="${id}" data-name="${p.name}" data-price="${p.priceLabel}" data-img="${p.img}" style="width:100%; margin-bottom:1rem;">Add to Cart</button>
                     <button class="btn btn-outline" style="width:100%;" onclick="window.location.href='cart.html'">Buy Now</button>
                 </div>
             </div>
