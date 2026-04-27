@@ -273,14 +273,14 @@ function loadServiceDetails(id) {
 function loadProductDetails(id) {
     const container = document.getElementById('product-detail-container');
     const products = {
-        '1': { name: 'Flower Decorated Hair/Braid', priceLabel: 'RS:300', img: 'PRODUCT1.jpg', desc: 'Beautiful flower decorated hair and braid designs.' },
-        '2': { name: 'Saree Designs', priceLabel: 'RS:200', img: 'PRODUCT2.jpg', desc: 'Elegant saree designs for every occasion.' },
-        '3': { name: 'Bangle Designs', priceLabel: 'RS:150', img: 'PRODUCT3.png', desc: 'Handcrafted bangle designs.' },
-        '4': { name: 'Decorations', priceLabel: 'RS:500', img: 'PRODUCT4.jpeg', desc: 'Custom decorations for your events.' },
-        '5': { name: 'They Want Decorations', priceLabel: 'RS:1000', img: 'PRODUCT5.jpg', desc: 'Premium event decorations tailored to your needs.' },
-        '6': { name: 'Wedding Props', priceLabel: 'RS:199', img: 'PRODUCT6.jpg', desc: 'Unique wedding props for memorable photos.' },
-        '7': { name: 'Style hair Flower Designs', priceLabel: 'RS:120', img: 'PRODUCT7.jpg', desc: 'Stylish hair flower designs to complete your look.' },
-        '8': { name: 'Haldi Jewellery', priceLabel: 'RS:599', img: 'PRODUCT8.jpg', desc: 'Traditional haldi jewellery for the bride.' }
+        '1': { name: 'Flower Decorated Hair/Braid', priceLabel: 'RS:499', price: '499', img: 'PRODUCT1.jpg', desc: 'Beautiful flower decorated hair and braid designs.' },
+        '2': { name: 'Saree Designs', priceLabel: 'RS:299', price: '299', img: 'PRODUCT2.jpg', desc: 'Elegant saree designs for every occasion.' },
+        '3': { name: 'Bangle Designs', priceLabel: 'RS:399', price: '399', img: 'PRODUCT3.png', desc: 'Handcrafted bangle designs.' },
+        '4': { name: 'Decorations', priceLabel: 'Custom Quote', price: '0', img: 'PRODUCT4.jpeg', desc: 'Custom decorations for your events.' },
+        '5': { name: 'They Want Decorations', priceLabel: 'Custom Quote', price: '0', img: 'PRODUCT5.jpg', desc: 'Premium event decorations tailored to your needs.' },
+        '6': { name: 'Wedding Props', priceLabel: 'RS:199', price: '199', img: 'PRODUCT6.jpg', desc: 'Unique wedding props for memorable photos.' },
+        '7': { name: 'Style Hair Flower Designs', priceLabel: 'RS:199', price: '199', img: 'PRODUCT7.jpg', desc: 'Stylish hair flower designs to complete your look.' },
+        '8': { name: 'Haldi Jewellery', priceLabel: 'RS:299', price: '299', img: 'PRODUCT8.jpg', desc: 'Traditional haldi jewellery for the bride.' }
     };
     const p = products[id];
     if (p) {
@@ -291,7 +291,7 @@ function loadProductDetails(id) {
                     <h1 style="font-size: 3.5rem;">${p.name}</h1>
                     <p style="color: var(--primary); font-size: 1.8rem; margin: 1rem 0 2.5rem;">${p.priceLabel}</p>
                     <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">${p.desc}</p>
-                    <button class="btn btn-primary add-to-cart-btn" data-id="${id}" data-name="${p.name}" data-price="${p.priceLabel}" data-img="${p.img}" style="width:100%; margin-bottom:1rem;">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="${id}" data-name="${p.name}" data-price="${p.price}" data-img="${p.img}" style="width:100%; margin-bottom:1rem;">Add to Cart</button>
                     <button class="btn btn-outline" style="width:100%;" onclick="window.location.href='cart.html'">Buy Now</button>
                 </div>
             </div>

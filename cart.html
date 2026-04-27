@@ -52,16 +52,16 @@
                     </h4>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
                         <span>Subtotal</span>
-                        <span id="subtotal">$0.00</span>
+                        <span id="subtotal">Rs. 0.00</span>
                     </div>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
                         <span>Shipping</span>
-                        <span>$0.00</span>
+                        <span>Rs. 0.00</span>
                     </div>
                     <div
                         style="border-top: 1px solid var(--border); margin: 1.5rem 0; padding-top: 1.5rem; display: flex; justify-content: space-between; font-weight: 600; font-size: 1.2rem;">
                         <span>Total</span>
-                        <span id="cart-total">$0.00</span>
+                        <span id="cart-total">Rs. 0.00</span>
                     </div>
                     <button id="checkout-btn" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Proceed to
                         Checkout</button>
@@ -99,7 +99,7 @@
 
             document.getElementById('checkout-btn').addEventListener('click', () => {
                 const cart = JSON.parse(localStorage.getItem('mrf_cart'));
-                simulateEmailNotification('New Order Placed!', `A new order for ${cart.length} items has been placed. Total: $${calculateTotal(cart)}`);
+                simulateEmailNotification('New Order Placed!', `A new order for ${cart.length} items has been placed. Total: Rs. ${calculateTotal(cart)}`);
                 localStorage.setItem('mrf_cart', JSON.stringify([]));
                 window.location.href = 'thank-you.html?type=order';
             });
@@ -120,15 +120,15 @@
                     <img src="${item.img}" style="width: 120px; height: 120px; object-fit: cover;">
                     <div style="flex-grow: 1;">
                         <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">${item.name}</h4>
-                        <p style="color: var(--primary); font-weight: 500;">$${item.price}</p>
+                        <p style="color: var(--primary); font-weight: 500;">Rs. ${item.price}</p>
                     </div>
                     <button onclick="removeItem(${index})" style="background: none; border: none; cursor: pointer; color: var(--text-muted);"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             `).join('');
 
             const total = calculateTotal(cart);
-            document.getElementById('subtotal').innerText = `$${total.toFixed(2)}`;
-            document.getElementById('cart-total').innerText = `$${total.toFixed(2)}`;
+            document.getElementById('subtotal').innerText = `Rs. ${total.toFixed(2)}`;
+            document.getElementById('cart-total').innerText = `Rs. ${total.toFixed(2)}`;
             updateCartCount();
         }
 
