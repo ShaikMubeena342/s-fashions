@@ -1,4 +1,4 @@
-// MRF FASHIONS - INTERACTIVE ELEMENTS & BACKEND SIMULATION
+// S FASHIONS - INTERACTIVE ELEMENTS & BACKEND SIMULATION
 
 document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');
@@ -193,7 +193,7 @@ function simulateEmailNotification(subject, body) {
     console.log(`Body: ${body}`);
 
     if (typeof emailjs !== 'undefined' && !window.location.href.includes('127.0.0.1')) {
-        const templateParams = { subject, message: body, to_name: "MRF Fashions Admin" };
+        const templateParams = { subject, message: body, to_name: "S Fashions Admin" };
         emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
             .then(() => console.log('✅ Real Email Sent!'))
             .catch((err) => console.error('❌ EmailJS Error:', err));
