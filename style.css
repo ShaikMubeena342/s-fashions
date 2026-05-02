@@ -156,7 +156,7 @@ nav .container {
     justify-content: center;
     text-align: center;
     padding-top: 80px;
-    background: linear-gradient(rgba(252, 249, 245, 0.6), rgba(252, 249, 245, 0.6)), url('assets/floral_hero_bg.png');
+    background: linear-gradient(rgba(252, 249, 245, 0.6), rgba(252, 249, 245, 0.6)), url('floral_hero_bg.png');
     background-size: cover;
     background-position: center;
 }
@@ -353,11 +353,11 @@ section {
 }
 
 .testimonial-card:nth-child(1) .author-img {
-    background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200');
+    background-image: url('client1.jpeg');
 }
 
 .testimonial-card:nth-child(2) .author-img {
-    background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200');
+    background-image: url('client2.jpeg');
 }
 
 /* --- FOOTER --- */

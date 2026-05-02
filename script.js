@@ -17,10 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem('mrf_cart')) localStorage.setItem('mrf_cart', JSON.stringify([]));
     if (!localStorage.getItem('mrf_reviews')) {
         const initialReviews = [
-            { name: "Sarah Jenkins", text: "The mehendi artist was incredible. She arrived on time and the designs were so intricate. A truly luxury experience.", role: "Bride-to-be" },
-            { name: "Eleanor Vance", text: "I love the handmade vases I bought! They add such a unique touch to my living room. Fast delivery too.", role: "Interior Enthusiast" }
+            { name: "Shaik Mubeena", text: "The mehendi artist was incredible. She arrived on time and the designs were so intricate. A truly luxury experience.", role: "Bride-to-be" },
+            { name: "Shaik Fouziya", text: "I love the handmade vases I bought! They add such a unique touch to my living room. Fast delivery too.", role: "Interior Enthusiast" }
         ];
         localStorage.setItem('mrf_reviews', JSON.stringify(initialReviews));
+    } else {
+        const reviews = JSON.parse(localStorage.getItem('mrf_reviews'));
+        let updated = false;
+        reviews.forEach(r => {
+            if (r.name === "Sarah Jenkins") { r.name = "Shaik Mubeena"; updated = true; }
+            if (r.name === "Eleanor Vance") { r.name = "Shaik Fouziya"; updated = true; }
+        });
+        if (updated) localStorage.setItem('mrf_reviews', JSON.stringify(reviews));
     }
 
     // Navbar scroll effect & Scroll to Top visibility
